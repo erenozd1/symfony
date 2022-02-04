@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ForController!{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<div class="example-wrapper">
+    {% for a in data %}
+        {{ a }}
+    {% endfor %}
+
+    {% if isActive==true%}
+    <h1>İs Active true geldi</h1>
+    {% elseif isActive==false%}
+    <h1>İs Active false geldi</h1>
+{% endif %}
+    {% if number is defined%}
+        <h1>number tanımlı</h1>
+    {% else %}
+        <h1>number tanımsız</h1>
+
+
+    {% endif %}
+
+</div>
+{% endblock %}
